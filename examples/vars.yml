@@ -1,3 +1,4 @@
+firewall_open: false # Set to true to open ports 80,443 in ufw or firewalld. Necessary for certbot to retrieve a SSL certificate.
 postgres_password: "{{ lookup('password', 'inventory/host_vars/{{ domain }}/passwords/postgres.psk chars=ascii_letters,digits') }}" # noqa yaml[line-length]:w
 
 # Next two only relevant if pictrs_safety == True
